@@ -1,0 +1,9 @@
+version: 1.0
+runtime: nodejs16
+build:
+  commands:    
+    build:
+      - echo Hello                                  
+run:
+  runtime-version: 16
+  command: node app.js
