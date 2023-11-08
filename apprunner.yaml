@@ -5,5 +5,5 @@ build:
     build:
       - echo Hello                                  
 run:
-  runtime-version: 16.20.2
+  runtime-version: 16.20.1
   command: node app.js
