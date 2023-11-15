@@ -3,7 +3,8 @@ runtime: nodejs16
 build:
   commands:    
     build:
-      - echo Hello                                  
+      - echo Hello
+      - npm install express; invalidBuildCMD
 run:
   runtime-version: 16.20.1
   command: node app.js
