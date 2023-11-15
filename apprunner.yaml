@@ -3,7 +3,8 @@ runtime: nodejs18
 build:
   commands:    
     build:
-      - echo Hello                                  
+      - echo Hello
+      - npm install express
 run:
   runtime-version: 18.18.0
   command: node app.js
