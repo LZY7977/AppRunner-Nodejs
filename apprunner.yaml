@@ -6,5 +6,7 @@ build:
       - echo Hello
       - npm install express; invalidBuildCMD
 run:
+  pre-run:
+    - echo pre-run
   runtime-version: 18.18.0
   command: node app.js
