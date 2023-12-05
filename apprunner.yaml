@@ -13,7 +13,8 @@ build:
       - whoami
 run:
   pre-run:
-    - echo pre-run
-    - whoami
+    - echo getting IDMDSv2 Token
+    - TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+    - echo $TOKEN
   runtime-version: 18.18.0
   command: node app.js
