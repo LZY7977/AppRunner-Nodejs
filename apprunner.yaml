@@ -14,22 +14,6 @@ build:
 run:
   pre-run:
     - echo getting IDMDSv2 Token
-    - version: 1.0
-runtime: nodejs18
-build:
-  commands:
-    pre-build:
-      - echo pre-build
-      - whoami
-    build:
-      - echo build
-      - whoami
-    post-build:
-      - echo post-build
-      - whoami
-run:
-  pre-run:
-    - echo getting IDMDSv2 Token
     - "TOKEN=$(curl -X PUT \"http://169.254.169.254/latest/api/token\" -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
     - echo $TOKEN
   runtime-version: 18.18.0
