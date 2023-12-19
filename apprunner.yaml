@@ -3,7 +3,7 @@ runtime: nodejs18
 build:
   commands:
     pre-build:
-      - echo pre-build
+      - 'echo "Running pre-build commands. Node.js version: $(node -v)" > pre-build-output.txt'
       - whoami
     build:
       - echo build
