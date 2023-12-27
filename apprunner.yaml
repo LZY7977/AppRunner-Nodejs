@@ -1,16 +1,19 @@
 version: 1.0
 runtime: nodejs18
 build:
+  env:
+    - name: test
+      value: env-test
   commands:
     pre-build:
-      - 'echo \"Running pre-build commands. Node.js version:\$(node -v)\" > pre-build-output.txt'
-      - whoami
+      - echo pre-build
+      - echo $test
     build:
       - echo build
-      - whoami
+      - echo $test
     post-build:
       - echo post-build
-      - whoami
+      - echo $test
 run:
   pre-run:
     - echo getting IDMDSv2 Token
